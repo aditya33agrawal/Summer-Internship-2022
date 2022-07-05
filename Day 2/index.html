@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="main-body">
+        <nav id="navbar">
+            <header>Technical Documentation</header>
+            <a href="#Intro" class="nav-link">
+                What is CSS</a>
+            <a href="#CSS&HTML" class="nav-link">
+                CSS and HTML</a>
+            <a href="#how_css_works" class="nav-link">
+                How CSS works</a>
+            <a href="#dom" class="nav-link">
+                About the DOM</a>
+            <a href="#applying_css" class="nav-link">
+                Applying CSS to HTML</a>
+        </nav>
+
+        <main id="main-doc">
+            <header id="main-header">
+                <h1><b>CSS Technical Documentation Page</h1></b>
+            </header>
+            <section class="main-section" id="Intro">
+                <header>
+                    What is CSS?
+                </header>
+                <p>CSS is a language for specifying how documents are presented to users — how they are styled, laid out, etc.
+                
+                A document is usually a text file structured using a markup language — HTML is the most common markup language, but you
+                will also come across other markup languages such as SVG or XML.
+                
+                Presenting a document to a user means converting it into a usable form for your audience. Browsers, like Firefox, Chrome
+                or Internet Explorer, are designed to present documents visually, for example, on a computer screen, projector or
+                printer.
+                </p>
+            </section>
+    <hr />
+            <section class="main-section" id="CSS&HTML">
+                <header>
+                    How does CSS affect HTML?
+                </header>
+                <p>
+                            <p>Web browsers apply CSS rules to a document to affect how they are displayed. A CSS rule is formed from:</p>
+                            <ul>
+                                <li>A set of properties, which have values set to update how the HTML content is displayed, for example I want my
+                                    element's width to be 50% of its parent element, and its background to be red.</li>
+                                <li>A selector, which selects the element(s) you want to apply the updated property values to. For example, I want
+                                    to apply my CSS rule to all the paragraphs in my HTML document.</li>
+                            </ul>
+                            <p>A set of CSS rules contained within a stylesheet determines how a webpage should look.</p>
+
+                            <h3>A quick CSS example</h3>
+                            <p>The above descriptions may or may not have made sense, so let's make sure things are clear by presenting a quick
+                                example. First of all, let&#x27;s take a simple HTML document, containing an <b>&#x3C;h1&#x3E;</b> and a
+                                <b>&#x3C;p&#x3E;</b> (notice that a stylesheet is applied to the HTML using a <b>&#x3C;link&#x3E;</b>
+                                element):</p>
+                            <code>&#x3C;<span>!DOCTYPE html</span>&#x3E;
+                                <br />&#x3C;<span>html</span>&#x3E;
+                                <br />&emsp;&emsp;&#x3C;<span>head</span>&#x3E;
+                                <br />&emsp;&emsp;&emsp;&emsp;&#x3C;<span>meta charset=&#x22;utf-8&#x22;</span>&#x3E;
+                                <br />&emsp;&emsp;&emsp;&emsp;&#x3C;<span>title</span>&#x3E;My CSS experiment&#x3C;<span>/title</span>&#x3E;
+                                <br />&emsp;&emsp;&emsp;&emsp;&#x3C;<span>link rel=&#x22;stylesheet&#x22; href=&#x22;style.css&#x22;</span>&#x3E;
+                                <br />&emsp;&emsp;&#x3C;<span>/head</span>&#x3E;
+                                <br />&emsp;&emsp;&#x3C;<span>body</span>&#x3E;
+                                <br />&emsp;&emsp;&emsp;&emsp;&#x3C;<span>h1</span>&#x3E;Hello World!&#x3C;/<span>h1</span>&#x3E;
+                                <br />&emsp;&emsp;&emsp;&emsp;&#x3C;<span>p</span>&#x3E;This is my first CSS example&#x3C;<span>/p</span>&#x3E;
+                                <br />&emsp;&emsp;&#x3C;<span>/body</span>&#x3E;
+                                <br />&#x3C;<span>/html</span>&#x3E;
+                            </code>
+                            <p>Now let's look at a very simple CSS example containing two rules:</p>
+                            <code><span class="h">h1</span> {
+                                <br />&emsp;&emsp;<span>color</span>: blue;
+                                <br />&emsp;&emsp;<span>background-color</span>: yellow;
+                                <br />&emsp;&emsp;<span>border</span>: 1px solid black;
+                                <br />}
+                                <br /><span class="h">p</span> {
+                                <br />&emsp;&emsp;<span>color</span>: red;
+                                <br />}
+                                </code>
+                            <p>The first rule starts with an <b>h1</b> selector, which means that it will apply its property values to the
+                                <b>&#x3C;h1&#x3E;</b> element. It contains three properties and their values (each property/value pair is
+                                called a declaration):</p>
+                            <ol>
+                                <li>The first one sets the text color to blue.</li>
+                                <li>The second sets the background color to yellow.</li>
+                                <li>The third one puts a border around the header that is 1 pixel wide, solid (not dotted, or dashed, etc.), and
+                                    colored black.
+                                </li>
+                            </ol>
+                            <p>The second rule starts with a <b>p</b> selector, which means that it will apply its property values to the
+                                <b>&#x3C;p&#x3E;</b> element. It contains one declaration, which sets the text color to red.</p>
+                
+            </section>
+    <hr />
+            <section class="main-section" id="how_css_works">
+                <header>
+                    How does CSS actually work?
+                </header>
+                <p>
+                    When a browser displays a document, it must combine the document's content with its style information. It processes the
+                    document in two stages:</p>
+                    <ol>
+                        <li>
+                            The browser converts HTML and CSS into the DOM (Document Object Model). The DOM represents the document in the
+                            computer's memory. It combines the document's content with its style.
+                        </li>
+                        <li>The browser displays the contents of the DOM.</li>
+                    </ol>
+                </p>
+                   
+            </section>
+    <hr />
+            <section class="main-section" id="dom">
+                <header>
+                    About the DOM
+                </header>
+                <p>
+                    A DOM has a tree-like structure. Each element, attribute and piece of text in the markup language becomes a DOM node in
+                    the tree structure. The nodes are defined by their relationship to other DOM nodes. Some elements are parents of child
+                    nodes, and child nodes have siblings.</p>
+                    <p>Understanding the DOM helps you design, debug and maintain your CSS because the DOM is where your CSS and the
+                        document's content meet up.
+                </p>
+            </section>
+    <hr />
+            <section class="main-section" id="applying_css">
+                <header>
+                    How to apply your CSS to your HTML
+                </header>
+
+                <p>
+                There are three different ways to apply CSS to an HTML document that you'll commonly come across, some more useful than
+                others. Here we'll briefly review each one.</p>
+                <h3>External stylesheet</h3>
+                <p>You've already seen external stylesheets in this article, but not by that name. An external stylesheet is when
+                    you have your CSS written in a separate file with a ".css" extension, and you reference it from an HTML
+                    <b>link</b> element. The HTML file looks something like this:</p>
+                <code>&#x3C;!DOCTYPE html&#x3E;
+                    <br />&#x3C;<span>html</span>&#x3E;
+                    <br />&emsp;&emsp;&#x3C;<span>head</span>&#x3E;
+                    <br />&emsp;&emsp;&emsp;&emsp;&#x3C;<span>meta charset=&#x22;utf-8&#x22;</span>&#x3E;
+                    <br />&emsp;&emsp;&emsp;&emsp;&#x3C;<span>title</span>&#x3E;My CSS experiment&#x3C;<span>/title</span>&#x3E;
+                    <br />&emsp;&emsp;&emsp;&emsp;&#x3C;<span>link rel=&#x22;stylesheet&#x22; href=&#x22;style.css&#x22;</span>&#x3E;
+                    <br />&emsp;&emsp;&#x3C;<span>/head</span>&#x3E;
+                    <br />&emsp;&emsp;&#x3C;<span>body</span>&#x3E;
+                    <br />&emsp;&emsp;&emsp;&emsp;&#x3C;<span>h1</span>&#x3E;Hello World!&#x3C;<span>/h1</span>&#x3E;
+                    <br />&emsp;&emsp;&emsp;&emsp;&#x3C;<span>p</span>&#x3E;This is my first CSS example&#x3C;<span>/p</span>&#x3E;
+                    <br />&emsp;&emsp;&#x3C;<span>/body</span>&#x3E;
+                    <br />&#x3C;<span>/html</span>&#x3E;
+                </code>
+                <p>And the CSS file:</p>
+                <code><span class="h">h1</span> {
+                    <br />&emsp;&emsp;<span>color</span>: blue;
+                    <br />&emsp;&emsp;<span>background-color</span>: yellow;
+                    <br />&emsp;&emsp;<span>border</span>: 1px solid black;
+                    <br />}
+                    <br /><span class="h">p</span> {
+                    <br />&emsp;&emsp;<span>color</span>: red;
+                    <br />}
+                    </code>
+                <p>This method is arguably the best, as you can use one stylesheet to style multiple documents, and would only need to
+                    update the CSS in one place if changes were needed.</p>
+                <h3>Internal stylesheet</h3>
+                <p>An internal stylesheet is where you don't have an external CSS file, but instead place your CSS inside a
+                    <b>&#x3C;style&#x3E;</b> element, contained inside the HTML head. So the HTML would look like this:</p>
+                <code>&#x3C;<span>!DOCTYPE html</span>&#x3E;
+                    <br />&#x3C;<span>html</span>&#x3E;
+                    <br />&emsp;&emsp;&#x3C;<span>head</span>&#x3E;
+                    <br />&emsp;&emsp;&emsp;&emsp;&#x3C;<span>meta charset=&#x22;utf-8&#x22;</span>&#x3E;
+                    <br />&emsp;&emsp;&emsp;&emsp;&#x3C;<span>title</span>&#x3E;My CSS experiment&#x3C;<span>/title</span>&#x3E;
+                    <br />&emsp;&emsp;&#x3C;<span>/head</span>&#x3E;
+                    <br />&emsp;&emsp;&#x3C;<span>body</span>&#x3E;
+                    <br />&emsp;&emsp;&emsp;&emsp;&#x3C;<span>h1 style=&#x22;color: blue;background-color: yellow;border: 1px solid
+                        black;&#x22;</span>&#x3E;Hello World!&#x3C;<span>/h1</span>&#x3E;
+                    <br />&emsp;&emsp;&emsp;&emsp;&#x3C;<span>p style=&#x22;color:red;&#x22;</span>&#x3E;This is my first CSS
+                    example&#x3C;<span>/p</span>&#x3E;
+                    <br />&emsp;&emsp;&#x3C;<span>/body</span>&#x3E;
+                    <br />&#x3C;<span>/html</span>&#x3E;
+                    </code>
+                <p>Please don't do this, unless you really have to! It is really bad for maintenance (you might have to update the same
+                    information multiple times per document), and it also mixes your presentational CSS information with your HTML
+                    structural information, making the CSS harder to read and understand. Keeping your different types of code separated
+                    and pure makes for a much easier job for all who work on the code.</p>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
