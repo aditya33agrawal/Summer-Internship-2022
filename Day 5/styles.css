@@ -1,0 +1,52 @@
+body {
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 20px 20vw;
+    font-size: 20px;
+    line-height: 1.25;
+    margin: 0;
+}
+
+header,
+main,
+footer {
+    max-width: 60vw;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: black;
+}
+
+pre {
+    border-left: 2px solid black;
+    font-family: "Ubuntu Mono", monospace;
+}
+
+p:not(.date),
+pre {
+    font-size: 17px;
+}
+
+.date {
+    font-family: "Ubuntu Condensed", sans-serif;
+    color: grey;
+}
+
+footer {
+    text-align: center;
+    color: grey;
+    margin-top: 40px;
+    font-family: "Ubuntu Condensed", sans-serif;
+}
