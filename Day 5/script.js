@@ -37,3 +37,44 @@ const makeBlog = (title, content) => {
 
 	bottom.appendChild(blog)
 }
+
+const blogEvent = (e) => {
+	console.log(e['path'][1])
+	const current_blog_title = e['path'][1].childNodes[1].innerText
+	localStorage.removeItem(current_blog_title)
+	e['path'][1].remove()
+}
+
+/* ------- Event Listeners ------- */
+
+add_blg.addEventListener('click', (e) => {
+	e.preventDefault()
+	let title = blg_title.value
+	let content = blg_content.value
+
+	if (title && content) {
+		makeBlog(title, content)
+		setLocalBlog(title, content)
+		blg_title.value = ''
+		blg_content.value = ''
+		return true
+	}
+
+	alert("Title Or Content Is Missing. Please Make Sure That You Have Filled The Title and Content Field.")
+
+})
+
+
+/* ------- Local Storage Stuff ------- */
+
+window.onload = () => {
+	getAllBlogs()
+}
+
+const setLocalBlog = (title, content) => localStorage.setItem(title.toString(), content.toString())
+
+const getAllBlogs = () => {
+	Object.keys(localStorage).forEach((key, index) => {
+		makeBlog(key, localStorage.getItem(key))
+	})
+}
