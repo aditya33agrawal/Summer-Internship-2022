@@ -79,8 +79,35 @@ Object.freeze(obj);
 ### Write a function that generates a random number between two ranges, -100 to 0 and 800 - 900.
 
 ```js
-functionradomInTwoRange(min1,max1,min2,max2){
-  ----------------
-  return number
-}
+function getRandomNumberInOneRange(num1 , num2){
+  return Math.floor(Math.random() * (num2 - num1 + 1)) + num1;
+};
+
+function getRandomNumberInTwoRanges(min1, max1, min2, max2){
+
+  let num1 = getRandomNumberInOneRange(min1, max1);
+  let num2 = getRandomNumberInOneRange(min2, max2);
+
+  return Math.random() < 0.5 ? num1 : num2;
+  
+  // function finalNumber(num2,num1){
+
+  //   let num3 = getRandomNumberInOneRange(num2, num1);
+
+  //   if(num3 < 0 || num3 > 800)
+  //   {
+  //     console.log(num3);
+  //     return;
+  //   }
+  //   else {
+  //    return finalNumber(num2, num1);
+  //   }
+  // }
+
+  // finalNumber(num2,num1);
+
+};
+
+console.log(getRandomNumberInTwoRanges(-100, 0 , 800 , 900))
+
 ```
